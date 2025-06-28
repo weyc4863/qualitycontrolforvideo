@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <title>影片檢核工具</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="top-bar">
+      <label>選擇影片：</label>
+      <input type="file" id="videoFile" accept="video/*" />
+      <button id="exportBtn">匯出成 Word</button>
+      <button id="exportHtmlBtn">匯出成 HTML</button>
+    </div>
+
+    <div class="main">
+      <div class="video-area">
+        <video id="video" controls></video>
+        <p class="hint">
+          提示：播放影片後按 <strong>C</strong> 鍵會截圖並暫停影片
+        </p>
+      </div>
+
+      <div class="checklist" id="checklistArea"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/docx@7.7.0/build/index.umd.min.js"></script>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
